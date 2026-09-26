@@ -1,1 +1,367 @@
-<h1>Heading 1</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshi Panchal | IT Student</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7ff;
+      color: #252136;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: rgba(250,247,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee7f7;
+    }
+    .logo { font-size: 22px; font-weight: 800; color: #7654a6; }
+    nav a {
+      text-decoration: none;
+      color: #514761;
+      margin-left: 24px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    nav a:hover { color: #7654a6; }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background: linear-gradient(135deg, #faf7ff 45%, #eee5ff);
+    }
+    .hero-content { max-width: 760px; }
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: #e8ddfa;
+      color: #684795;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    h1 span { color: #7654a6; }
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: #625b6f;
+      margin-bottom: 28px;
+    }
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .primary { background: #7654a6; color: white; }
+    .secondary { border: 1px solid #cfc2e2; color: #5f4d78; background: white; }
+
+    section { padding: 80px 8%; }
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      color: #756d80;
+      margin-bottom: 35px;
+      max-width: 650px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 35px;
+    }
+    .card {
+      background: white;
+      padding: 28px;
+      border: 1px solid #eee6f7;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(75, 49, 105, .06);
+    }
+    .card h3 { margin-bottom: 12px; color: #624687; }
+    .facts { display: grid; gap: 14px; }
+    .fact {
+      padding: 15px;
+      background: #f6f0fc;
+      border-radius: 12px;
+    }
+    .fact strong { display: block; color: #7654a6; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .skill {
+      padding: 10px 15px;
+      border-radius: 25px;
+      background: #eee5fa;
+      color: #5d427d;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .project {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(75,49,105,.12);
+    }
+    .project-number {
+      font-size: 13px;
+      color: #9879bd;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .project p { color: #70697a; margin-top: 8px; }
+
+    .interests {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .interest {
+      text-align: center;
+      padding: 24px 15px;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #eee6f7;
+    }
+    .interest .icon { font-size: 28px; margin-bottom: 10px; }
+    footer {
+      text-align: center;
+      padding: 30px 8%;
+      background: #241c30;
+      color: #ddd4e7;
+    }
+
+    @media (max-width: 800px) {
+      nav { padding: 15px 5%; }
+      nav div:last-child { display: none; }
+      .hero, section { padding-left: 5%; padding-right: 5%; }
+      .about-grid, .projects { grid-template-columns: 1fr; }
+      .interests { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">HP.</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#interests">Interests</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="tag">1st Year IT Student • Creative Technologist</div>
+      <h1>Hi, I'm <span>Himanshi.</span></h1>
+      <p>
+        I’m an IT student exploring programming, web development, DSA and
+        creative technology. I enjoy turning ideas into useful digital
+        projects while learning how technology can solve real-world problems.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View My Projects</a>
+        <a class="btn secondary" href="#about">Know More</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-subtitle">
+      Learning technology step by step while building practical projects and
+      exploring the intersection of technology, creativity and entrepreneurship.
+    </p>
+
+    <div class="about-grid">
+      <div class="card">
+        <h3>My Journey</h3>
+        <p>
+          I’m currently pursuing B.Tech in Information Technology. I started
+          with programming fundamentals and Python, and I'm now strengthening
+          my DSA and development skills. Alongside coding, I enjoy creative
+          work, design and brainstorming product ideas.
+        </p>
+        <br>
+        <p>
+          My goal is not just to learn code, but to understand how technology
+          can be used to create meaningful products and solve everyday problems.
+        </p>
+      </div>
+
+      <div class="card facts">
+        <div class="fact">
+          <strong>Education</strong>
+          B.Tech — Information Technology
+        </div>
+        <div class="fact">
+          <strong>Currently Learning</strong>
+          DSA • Web Development • SQL
+        </div>
+        <div class="fact">
+          <strong>Programming</strong>
+          Python • C / C++ fundamentals
+        </div>
+        <div class="fact">
+          <strong>Interests</strong>
+          Tech • Design • Entrepreneurship
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills & Learning</h2>
+    <p class="section-subtitle">Technologies and areas I'm currently building confidence in.</p>
+    <div class="card">
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+        <span class="skill">DSA</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">UI / Design</span>
+        <span class="skill">Creative Thinking</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">Some of the practical projects I've worked on while learning.</p>
+
+    <div class="projects">
+      <div class="card project">
+        <div class="project-number">01 — PYTHON</div>
+        <h3>Library Management System</h3>
+        <p>
+          A Python-based system for managing books, accounts, borrowing and
+          late fees, using CSV files for data storage.
+        </p>
+      </div>
+
+      <div class="card project">
+        <div class="project-number">02 — PYTHON</div>
+        <h3>Banking System</h3>
+        <p>
+          A menu-driven banking application with account creation, balance
+          checking, deposits, withdrawals and loan calculations.
+        </p>
+      </div>
+
+      <div class="card project">
+        <div class="project-number">03 — WEB</div>
+        <h3>Saving Tracker</h3>
+        <p>
+          A simple project concept designed to help users track savings,
+          understand spending and build better money habits.
+        </p>
+      </div>
+
+      <div class="card project">
+        <div class="project-number">04 — HACKATHON</div>
+        <h3>Energy Usage Comparison</h3>
+        <p>
+          A concept exploring how households can compare appliance energy
+          consumption and make more informed choices.
+        </p>
+      </div>
+
+      <div class="card project">
+        <div class="project-number">05 — CREATIVE TECH</div>
+        <h3>Product Ideas</h3>
+        <p>
+          Exploring useful physical products that combine technology,
+          portability, design and everyday convenience.
+        </p>
+      </div>
+
+      <div class="card project">
+        <div class="project-number">06 — EXPLORING</div>
+        <h3>More Coming Soon</h3>
+        <p>
+          Currently learning and building. This section will grow as new
+          projects are completed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2 class="section-title">Beyond Coding</h2>
+    <p class="section-subtitle">
+      Technology is only one part of what I enjoy.
+    </p>
+
+    <div class="interests">
+      <div class="interest">
+        <div class="icon">🎨</div>
+        <strong>Creative Design</strong>
+      </div>
+      <div class="interest">
+        <div class="icon">💡</div>
+        <strong>New Ideas</strong>
+      </div>
+      <div class="interest">
+        <div class="icon">🚀</div>
+        <strong>Entrepreneurship</strong>
+      </div>
+      <div class="interest">
+        <div class="icon">💻</div>
+        <strong>Technology</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed & built by Himanshi Panchal • Learning, creating, experimenting.</p>
+  </footer>
+
+  <script>
+    // Small interaction: update the page title when the user scrolls.
+    window.addEventListener("scroll", () => {
+      document.title = window.scrollY > 100
+        ? "Himanshi | Projects & Skills"
+        : "Himanshi Panchal | IT Student";
+    });
+  </script>
+
+</body>
+</html>
